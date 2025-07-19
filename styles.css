@@ -1,0 +1,467 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+body {
+    background-image: url(./back.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-size: 20px;
+    color: #fff;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+#navbar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background-color: rgb(9, 7, 20);
+    padding: 25px 9%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    z-index: 1000;
+}
+
+#navbar .logo {
+    font-size: 30px;
+    font-weight: 700;
+    color: rgb(59, 150, 156);
+}
+
+#navbar ul {
+    display: flex;
+}
+
+#navbar ul li {
+    list-style: none;
+    margin-left: 35px;
+}
+
+#navbar ul li a {
+    position: relative;
+    font-size: 20px;
+    font-weight: 500;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+#navbar ul li a::before {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background-color: #0ef;
+    transition: all 0.5s;
+}
+
+#navbar ul li a:hover {
+    color: #0ef;
+}
+
+#navbar ul li a:hover::before {
+    width: 100%;
+}
+
+/* Home Section */
+.home {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    padding: 60px 9% 0;
+    color: #fff;
+}
+
+.home-info h1 {
+    font-size: 55px;
+}
+
+.home-info h2 {
+    font-size: 32px;
+    margin-top: -10px;
+}
+
+.home-info p {
+    font-size: 16px;
+    margin: 10px 0 25px;
+}
+
+.home-info .btn-sci {
+    display: flex;
+    column-gap: 20px;
+    align-items: center;
+    padding: 10px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: rgb(27, 32, 32);
+    border: 2px solid rgb(72, 46, 55);
+    margin-bottom: 10px;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgb(70, 64, 67);
+    font-size: 16px;
+    font-weight: 600;
+    transition-duration: 0.5s;
+    color: #fff;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: transparent;
+    color: rgb(239, 195, 200);
+    box-shadow: none;
+}
+
+.home-info .btn-sci .sci a {
+    display: inline-flex;
+    padding: 8px;
+    border: 2px solid rgb(98, 123, 124);
+    border-radius: 50%;
+    font-size: 20px;
+    color: rgb(162, 196, 164);
+    margin: 0 8px;
+    box-shadow: 0 0 10px #0ef;
+}
+
+.home-img .img-box {
+    margin-left: 10px;
+    background-image: url(./my.jpg);
+    background-size: cover;
+    position: relative;
+    width: 20vw;
+    height: 20vw;
+    max-width: 300px;
+    max-height: 300px;
+    background-color: rgb(204, 218, 226);
+    border-radius: 50%;
+    padding: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-img .img-box::before {
+    content: '';
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    
+}
+
+.home-img .img-box .img-item {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-image: url(./me.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.home-img .img-box .img-item img {
+    position: absolute;
+    top: 30px;
+    width: 85%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+}
+
+/* Headings */
+.heading,
+.headingp {
+    width: 300px;
+    height: 60px;
+    margin: 100px auto 0;
+    text-align: center;
+    box-shadow: 0 0px 10px #0ef;
+    font-size: 40px;
+    color: white;
+    padding: 5px;
+}
+
+.heading:hover,
+.headingp:hover {
+    color: #0ef;
+    cursor: pointer;
+}
+
+/* Skills */
+.skills-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+    gap: 100px;
+    border: 2px solid rgb(81, 87, 87);
+    box-shadow: 0 0 10px rgb(84, 121, 121);
+    width: 1200px;
+    margin: 150px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px;
+    padding: 50px;
+
+}
+
+.skills-row {
+    width: 1000px;
+    max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.skill-card {
+    flex: 1;
+    height: 200px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 85px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.skill-card:hover {
+    transform: translateY(8px);
+    box-shadow: 10px 10px 10px rgb(166, 179, 180);
+}
+
+.skill-card img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+.projects-row {
+  display: flex;
+  flex-wrap: nowrap;           /* keep cards in a row */
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+  padding: 40px;
+  margin: 100px auto;
+  margin-left: 200px;
+  max-width: 100%;
+  overflow-x: auto;            /* scroll if overflow */
+  scrollbar-width: thin;
+  -webkit-overflow-scrolling: touch;
+}
+
+.projects-row::-webkit-scrollbar {
+  height: 6px;
+}
+
+.projects-row::-webkit-scrollbar-thumb {
+  background-color: #0ef;
+  border-radius: 10px;
+}
+
+.project-card {
+  flex: 0 0 auto;
+  width: 300px;
+  height: 250px;
+  border-radius: 12px;
+  background-color: rgb(9, 7, 20);
+  border: 1.5px solid rgb(0, 145, 255);
+  box-shadow: 0 4px 10px #0ef;
+  overflow: hidden;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.project-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(8px);
+  box-shadow: 10px 10px 10px rgb(36, 44, 45);
+}
+
+.project-card:hover img {
+  transform: scale(1.05);
+}
+
+/* Responsive design */
+@media (max-width: 1024px) {
+  .projects-row {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .project-card {
+    width: 35%;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .project-card {
+    width: 90%;
+    height: 200px;
+  }
+}
+
+
+
+
+.contact {
+    padding: 50px 20px;
+    background-color: #22222200;
+    color: #fff;
+    text-align: center;
+}
+
+.contact h1 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    margin-top: 40px;
+    color: #a1a67e;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.contact-form label {
+    font-size: 16px;
+    color: #a9b8a7;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #a1b298;
+    border-radius: 8px;
+    background-color: #272d38;
+    color: #fff;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #29667a;
+    outline: none;
+}
+
+.contact-form button {
+    padding: 12px 20px;
+    background-color: #9c7cb8;
+    color: #1f242d;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #8a934f;
+}
+
+/* Footer */
+footer {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #222;
+    color: #ccc;
+    text-align: center;
+    font-size: 14px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .skills-container,
+    .skills-row,
+    .projects-row {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .skill-card,
+    .project-card {
+        width: 90%;
+        height: auto;
+    }
+
+    .headingp {
+        font-size: 35px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .project-card {
+        height: 220px;
+    }
+
+    .home-img .img-box {
+        width: 40vw;
+        height: 40vw;
+    }
+
+    .headingp {
+        font-size: 30px;
+    }
+
+    footer {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .project-card {
+        width: 100%;
+        height: 200px;
+    }
+
+    .headingp {
+        font-size: 25px;
+    }
+
+    .home-img .img-box {
+        width: 60vw;
+        height: 60vw;
+    }
+}
